@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mabuga eFootball League</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Mabuga eFootball League</h1>
+        <div class="last-updated">Last updated: <span id="update-time"></span></div>
+    </div>
+
+    <div class="match-form">
+        <h3>Add Match Result</h3>
+        <div class="form-row">
+            <select id="homeTeam">
+                <option value="0">Barcelona</option>
+                <option value="1">Manchester United</option>
+                <option value="2">Portugal</option>
+                <option value="3">Celtic</option>
+                <option value="4">Arsenal</option>
+                <option value="5">Chelsea</option>
+                <option value="6">Bayern Munich</option>
+                <option value="7">PSG</option>
+                <option value="8">Real Madrid</option>
+                <option value="9">AJAX</option>
+            </select>
+            <input type="number" id="homeScore" min="0" placeholder="GF">
+            <span>vs</span>
+            <input type="number" id="awayScore" min="0" placeholder="GA">
+            <select id="awayTeam">
+                <option value="0">Barcelona</option>
+                <option value="1">Manchester United</option>
+                <option value="2">Portugal</option>
+                <option value="3">Celtic</option>
+                <option value="4">Arsenal</option>
+                <option value="5">Chelsea</option>
+                <option value="6">Bayern Munich</option>
+                <option value="7">PSG</option>
+                <option value="8">Real Madrid</option>
+                <option value="9">AJAX</option>
+            </select>
+            <button id="add-result">Add Result</button>
+            <button id="reset-league">Reset League</button>
+        </div>
+    </div>
+
+    <table class="league-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Team</th>
+                <th>Pl</th>
+                <th>W</th>
+                <th>D</th>
+                <th>L</th>
+                <th>GF</th>
+                <th>GA</th>
+                <th>GD</th>
+                <th>Pts</th>
+            </tr>
+        </thead>
+        <tbody id="league-body">
+            <!-- Filled by JavaScript -->
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
